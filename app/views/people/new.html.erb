@@ -1,2 +1,16 @@
-<h1>People#new</h1>
-<p>Find me in app/views/people/new.html.erb</p>
+<h2>New person</h2>
+  <%= form_for @person do |p| %>
+    <%= p.label :name %>
+    <%= p.text_field :name %>
+
+    <%= p.label :age %>
+    <%= p.number_field :age %>
+
+    <%= p.label :hair_color %>
+    <%= p.text_field :hair_color %>
+
+    <%= p.label :race %>
+    <%= p.text_field :race %>
+
+    <%= p.submit %>
+  <% end %>
