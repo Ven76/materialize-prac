@@ -22,4 +22,10 @@ class PeopleController < ApplicationController
 
   def edit
   end
+
+  private
+
+  def person_params
+    params.require(:person).permit(:name, :age, :race, :hair_color)
+  end
 end
