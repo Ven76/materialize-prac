@@ -1,8 +1,19 @@
 <h3> People </h3>
-  <% @people.each do |person| %>
-    <h4> <%= person.name %> </h4>
-    <h4> <%= person.age %> </h4>
-    <h4> <%= person.race %> </h4>
-    <h4> <%= person.hair_color %> </h4>
-    <%= link_to 'Show page', person_path(person) %>
-  <% end %>
+
+  <% if @people.any? %>
+      <% @people.each do |person| %>
+        <div>
+          <%= person.name %>
+          <%= person.age %>
+          <%= person.race %>
+          <%= person.hair_color %>
+          <%= link_to 'Show page', person_path(person) %>
+        </div>
+      <% end %>
+
+    <% else %>
+      <h3> No people found. Make an entry </h3>
+    <% end %>
+
+    <hr />
+    <%= link_to 'New person', new_person_path %>

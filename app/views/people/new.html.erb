@@ -1,16 +1,18 @@
 <h2>New person</h2>
-  <%= form_for @person do |p| %>
-    <%= p.label :name %>
-    <%= p.text_field :name %>
 
-    <%= p.label :age %>
-    <%= p.number_field :age %>
+  <%= form_for @person do |f| %>
 
-    <%= p.label :hair_color %>
-    <%= p.text_field :hair_color %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
 
-    <%= p.label :race %>
-    <%= p.text_field :race %>
+      <%= f.label :age %>
+      <%= f.number_field :age %>
 
-    <%= p.submit %>
+      <%= f.label :hair_color %>
+      <%= f.text_field :hair_color %>
+
+      <%= f.label :race %>
+      <%= f.text_field :race %>
+
+    <%= f.submit %>
   <% end %>
